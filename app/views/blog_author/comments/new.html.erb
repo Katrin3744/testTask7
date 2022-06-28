@@ -1,0 +1,12 @@
+<%= form_with model: [:blog_author, @post, @comment], local: true do |form| %>
+  <%= render 'shared/errors', resource: @comment %>
+
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_area :body, id: :comment_body %><br>
+  </p>
+
+  <p><%= form.submit %></p>
+<% end %>
+
+<%= link_to 'Back', blog_author_post_comments_path(@post) %>
