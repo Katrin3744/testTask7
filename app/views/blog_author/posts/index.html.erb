@@ -1,0 +1,16 @@
+<h1> All posts </h1>
+
+<%= link_to 'Create new post', new_blog_author_post_path %>
+
+<table class="table">
+  <tr>
+    <th>Author</th>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Time</th>
+    <th colspan="1">Watch comments</th>
+  </tr>
+  <%= render @posts %>
+</table>
+
+

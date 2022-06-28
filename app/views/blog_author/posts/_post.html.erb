@@ -1,0 +1,13 @@
+<tr>
+  <td><%= post.author.login %></td>
+  <td><%= post.title %></td>
+  <td><%= post.body %></td>
+  <td><%= post.created_at %></td>
+  <td><%= link_to 'Show', blog_author_post_comments_path(post) %></td>
+  <% if post.author == current_user %>
+    <td><%= link_to 'Delete',
+                    blog_author_post_path(post),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %></td>
+  <% end %>
+</tr>

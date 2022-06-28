@@ -1,0 +1,10 @@
+<h1> <%= @post.title %></h1>
+<p><%= @post.body %></p>
+
+<%= link_to 'Leave comment', new_post_comment_path(@post) %>
+
+<table class="table">
+  <%= render @comments %>
+</table>
+
+<%= link_to 'Back', posts_path %>

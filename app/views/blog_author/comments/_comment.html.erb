@@ -1,0 +1,11 @@
+<tr>
+  <td><%= comment.author.login %></td>
+  <td><%= comment.body %></td>
+  <td><%= comment.created_at %></td>
+  <% if comment.author == current_user %>
+    <td><%= link_to 'Delete',
+                    blog_author_comment_path(comment),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %></td>
+  <% end %>
+</tr>

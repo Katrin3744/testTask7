@@ -1,0 +1,7 @@
+<tr>
+  <td><%= post.author.login %></td>
+  <td><%= post.title %></td>
+  <td><%= post.body %></td>
+  <td><%= post.created_at %></td>
+  <td><%= link_to 'Show', post_comments_path(post) %></td>
+</tr>
